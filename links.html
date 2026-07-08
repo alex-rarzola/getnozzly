@@ -33,6 +33,12 @@
                     box-shadow: 0 10px 26px rgba(240,188,30,.3); }
   .link.highlight:hover { background: #f6c93b; }
   .link.highlight .arrow { opacity: .7; }
+  @keyframes shopPulse { 0%,100%{ box-shadow: 0 8px 22px rgba(254,44,85,.35); }
+                         50%{ box-shadow: 0 10px 32px rgba(254,44,85,.65); } }
+  .link.shop { background: linear-gradient(135deg, #FE2C55, #ff5b7b); color: #fff;
+               border-color: transparent; font-weight: 700; animation: shopPulse 2s ease-in-out infinite; }
+  .link.shop:hover { background: linear-gradient(135deg, #ff3d63, #ff6f8c); transform: translateY(-3px); }
+  .link.shop .arrow { opacity: .85; }
   .soon { background: rgba(255,255,255,.07); border-style: dashed; }
   .soon .badge { font-size: 11px; font-weight: 700; letter-spacing: .5px;
                  background: #F0BC1E; color: #0B3D30; padding: 3px 9px; border-radius: 20px; }
@@ -51,6 +57,12 @@
     <a class="link highlight" href="https://wa.me/525529375767?text=Hola!%20Vi%20tu%20TikTok%20y%20quiero%20cotizar%20una%20pieza%20personalizada%20%F0%9F%A7%B5" target="_blank" rel="noopener">
       <span class="emoji">🛒</span>
       <span class="txt">Pide tu pieza personalizada<small>Cotiza por WhatsApp</small></span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="link shop" href="https://vt.tiktok.com/ZSC3XQc1q/?page=TikTokShop" target="_blank" rel="noopener">
+      <span class="emoji">🛍️</span>
+      <span class="txt">Compra en mi TikTok Shop<small>Piezas listas para enviar 🔥</small></span>
       <span class="arrow">↗</span>
     </a>
 
