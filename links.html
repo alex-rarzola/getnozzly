@@ -25,6 +25,7 @@
           backdrop-filter: blur(6px); transition: transform .15s, background .2s; }
   .link:hover { transform: translateY(-2px); background: rgba(255,255,255,.2); }
   .link .emoji { font-size: 22px; width: 26px; text-align: center; }
+  .link .app-ico { width: 30px; height: 30px; border-radius: 7px; object-fit: cover; flex-shrink: 0; }
   .link .txt { flex: 1; text-align: left; line-height: 1.2; }
   .link .txt small { display: block; font-weight: 400; font-size: 12px; opacity: .8; margin-top: 2px; }
   .link .arrow { opacity: .55; font-size: 18px; }
@@ -43,7 +44,7 @@
 </head>
 <body>
   <div class="wrap">
-    <img class="logo" src="icon.png" alt="Nozzly">
+    <img class="logo" src="brand-logo.png" alt="Nozzly">
     <h1>Nozzly</h1>
     <p class="tag">Calcula el precio real de tus impresiones 3D.<br>Descarga la app y síguenos 👇</p>
 
@@ -59,23 +60,29 @@
       <span class="arrow">↗</span>
     </a>
 
+    <a class="link" href="https://www.getduzzly.com" target="_blank" rel="noopener">
+      <span class="emoji">🌐</span>
+      <span class="txt">Sitio web · getduzzly.com<small>Conoce Duzzly</small></span>
+      <span class="arrow">↗</span>
+    </a>
+
     <p class="section">Descarga las apps</p>
 
     <a class="link" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener">
-      <span class="emoji">📱</span>
+      <img class="app-ico" src="icon.png" alt="Nozzly">
       <span class="txt">Descargar Nozzly<small>App Store · iPhone y iPad · Gratis</small></span>
       <span class="arrow">↗</span>
     </a>
 
     <a class="link soon" href="#" onclick="return false;">
-      <span class="emoji">🤖</span>
+      <img class="app-ico" src="icon.png" alt="Nozzly">
       <span class="txt">Nozzly para Android<small>Muy pronto en Google Play</small></span>
       <span class="badge">10 JUL</span>
     </a>
 
     <a class="link" href="https://apps.apple.com/us/app/duzzly/id6786425416" target="_blank" rel="noopener">
-      <span class="emoji">💳</span>
-      <span class="txt">Duzzly<small>Gestiona tus suscripciones · iPhone y iPad</small></span>
+      <img class="app-ico" src="duzzly-icon.png" alt="Duzzly">
+      <span class="txt">Descargar Duzzly<small>App Store · iPhone y iPad</small></span>
       <span class="arrow">↗</span>
     </a>
 
