@@ -6,7 +6,7 @@
 <title>Nozzly — Costo, precio y gestión de impresión 3D</title>
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-<meta name="description" content="Calcula el precio real de tus impresiones 3D y gestiona impresoras, filamentos y figuras. Disponible para iPhone y iPad, y pronto en Android.">
+<meta name="description" content="Calcula el precio real de tus impresiones 3D: material, luz, tiempo de máquina, IVA y margen. Cotizaciones en PDF, conjuntos de varias piezas y catálogo por categorías. Para iPhone, iPad y Android.">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -175,7 +175,7 @@
       <a href="#android">Android</a>
       <a href="#premium">Premium</a>
       <a href="privacy.html">Privacidad</a>
-      <a class="nav-dl" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener">Descargar</a>
+      <a class="nav-dl" id="navDownload" href="#descargar">Descargar</a>
     </div>
   </div>
 </header>
@@ -186,8 +186,8 @@
   <div class="wrap hero-grid">
     <div>
       <h1>Cobra el precio real de tus impresiones 3D</h1>
-      <p class="sub">Nozzly calcula cuánto cuesta de verdad cada pieza —filamento, luz, merma y tu margen— y te ayuda a gestionar impresoras, filamentos y figuras en un solo lugar.</p>
-      <div class="hero-ctas">
+      <p class="sub">Nozzly calcula cuánto cuesta de verdad cada pieza —filamento, luz, el tiempo de tu máquina y tu margen— y te deja mandar la cotización en PDF, con tu catálogo ordenado por categorías.</p>
+      <div class="hero-ctas" id="descargar">
         <a class="appstore-btn" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener" aria-label="Descargar Nozzly en la App Store">
           <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span class="ab-txt"><small>Descargar en la</small><b>App Store</b></span>
@@ -257,9 +257,12 @@
     <p class="lead reveal">La mayoría pierde dinero porque solo cuenta el filamento. Nozzly cuenta todo.</p>
     <div class="grid">
       <div class="card reveal"><div class="ic">$</div><h3>Costo real, no estimado</h3><p>Material por color y marca, electricidad, merma y el margen que tú decidas, con desglose claro.</p></div>
+      <div class="card reveal"><div class="ic">⏱</div><h3>Cobra el tiempo de tu máquina</h3><p>Define un costo por hora de impresión y el tiempo deja de ser invisible en tu precio.</p></div>
       <div class="card reveal"><div class="ic">◎</div><h3>Varios filamentos por pieza</h3><p>Costea piezas a varios colores o materiales, cada filamento con su gramaje.</p></div>
+      <div class="card reveal"><div class="ic">◫</div><h3>Categorías para tu catálogo</h3><p>Agrupa piezas y conjuntos por tema —personajes, llaveros, herramientas— y filtra en un toque.</p></div>
+      <div class="card reveal"><div class="ic">◈</div><h3>Conjuntos de varias piezas</h3><p>Arma un producto con sus partes y cotízalo como uno solo, con el desglose que tú decidas mostrar.</p></div>
+      <div class="card reveal"><div class="ic">%</div><h3>IVA como tú lo manejas</h3><p>Precios con IVA incluido o sumado aparte, y en la cotización se desglosa Base + IVA.</p></div>
       <div class="card reveal"><div class="ic">⤴</div><h3>Comparte al instante</h3><p>Manda el precio listo por WhatsApp o donde quieras, en un toque.</p></div>
-      <div class="card reveal"><div class="ic">▦</div><h3>Gestiona tu catálogo</h3><p>Guarda impresoras y filamentos, organiza tus figuras con foto, SKU y buscador.</p></div>
       <div class="card reveal"><div class="ic">⌁</div><h3>Tu moneda y tu país</h3><p>Trabaja en tu moneda con una referencia de tarifa de luz por país, ajustable.</p></div>
       <div class="card reveal"><div class="ic">⛶</div><h3>Privado y tuyo</h3><p>Tus datos viven en tu dispositivo y, con iCloud, en tu cuenta privada. No recopilamos nada.</p></div>
     </div>
@@ -272,12 +275,14 @@
     <div class="carousel reveal">
       <div class="phone car-phone">
         <div class="ph-fallback" id="carFallback">Agrega tus capturas:<br>cap1.png · cap2.png · cap3.png</div>
-        <img class="slide active" src="cap1.png" alt="Editar figura con foto" onerror="document.getElementById('carFallback').style.display='flex';">
-        <img class="slide" src="cap2.png" alt="Lista de figuras" onerror="document.getElementById('carFallback').style.display='flex';">
-        <img class="slide" src="cap3.png" alt="Filamentos" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide active" src="cap1.png" alt="Cotiza conjuntos y piezas sueltas juntos" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap2.png" alt="Cotización en PDF con tu logo" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap3.png" alt="Desglose de IVA en la cotización" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap4.png" alt="Filamentos con stock y costo por gramo" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap5.png" alt="Catálogo filtrado por categoría" onerror="document.getElementById('carFallback').style.display='flex';">
       </div>
       <div class="dots">
-        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </div>
     </div>
   </div>
@@ -309,12 +314,15 @@
       <h2>Lleva tu negocio de impresión 3D al siguiente nivel</h2>
       <p>Un solo pago, sin suscripción. Desbloquea las herramientas que te hacen cotizar y vender como pro.</p>
       <div class="pgrid">
-        <div><b>Cotizaciones en PDF</b><span>Con los datos de tu negocio y tu cliente, listas para enviar.</span></div>
+        <div><b>Cotizaciones en PDF</b><span>Con el nombre y el logo de tu negocio, listas para enviar.</span></div>
+        <div><b>Clientes guardados</b><span>Con RFC y contacto, para cotizar en un toque.</span></div>
+        <div><b>Conjuntos de varias piezas</b><span>Arma un producto con sus partes y cotízalo como uno solo.</span></div>
+        <div><b>Cotiza todo junto</b><span>Conjuntos y piezas sueltas en la misma cotización.</span></div>
+        <div><b>Importa tu .3mf</b><span>Trae el archivo del slicer y crea las figuras automáticamente.</span></div>
+        <div><b>Extras reutilizables</b><span>Bolsa, argolla o pintura, con cobro por cantidad prorrateado.</span></div>
         <div><b>Inventario de filamento</b><span>Descuenta tu stock al imprimir y te avisa cuando queda poco.</span></div>
-        <div><b>Costeo por lotes</b><span>Cotiza una placa con varias piezas a la vez.</span></div>
         <div><b>Exportar a Excel</b><span>Lleva tu catálogo a Excel, Numbers o Google Sheets.</span></div>
         <div><b>Sin límites</b><span>Impresoras, filamentos y figuras ilimitados.</span></div>
-        <div><b>Mano de obra y depreciación</b><span>Suma tu tiempo y el desgaste de la máquina al precio.</span></div>
       </div>
       <div class="premium-ctas">
         <a class="appstore-btn" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener" aria-label="Descargar Nozzly en la App Store">
@@ -390,6 +398,23 @@
     let timer = setInterval(() => go(ci + 1), 2800);
     dots.forEach((d, i) => d.addEventListener("click", () => { clearInterval(timer); go(i); timer = setInterval(() => go(ci + 1), 2800); }));
   }
+
+  // El botón "Descargar" del menú manda a la tienda que le toca a cada quien.
+  // Sin JS o en escritorio, el enlace cae al bloque del hero, donde están
+  // las dos insignias, así que nunca lleva a la tienda equivocada.
+  (function () {
+    const APP_STORE = "https://apps.apple.com/app/nozzly/id6780641595";
+    const PLAY = "https://play.google.com/store/apps/details?id=com.alejandrorosales.nozzly";
+    const btn = document.getElementById("navDownload");
+    if (!btn) return;
+    const ua = navigator.userAgent || "";
+    const isAndroid = /Android/i.test(ua);
+    // El iPad se reporta como Mac, se distingue por el soporte táctil.
+    const isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+                  (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+    const store = isAndroid ? PLAY : (isIOS ? APP_STORE : null);
+    if (store) { btn.href = store; btn.target = "_blank"; btn.rel = "noopener"; }
+  })();
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
