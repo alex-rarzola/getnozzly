@@ -54,6 +54,9 @@
                 animation: tripoPulse 2.4s ease-in-out infinite; }
   .link.tripo:hover { transform: translateY(-3px); border-color: #F0BC1E; }
   .link.tripo .txt strong, .link.tripo .accent { color: #F0BC1E; }
+  /* El subtítulo va al 80 % de opacidad; la oferta no, porque es la razón
+     por la que alguien toca este botón y debe leerse de inmediato. */
+  .link.tripo .accent { opacity: 1; font-weight: 600; }
   .link.tripo .arrow { color: #F0BC1E; opacity: .95; }
   .link.tripo .app-ico { background: transparent; padding: 0; }
   .soon { background: rgba(255,255,255,.07); border-style: dashed; }
@@ -71,17 +74,15 @@
     <h1>Nozzly</h1>
     <p class="tag">Todos mis enlaces en un solo lugar 👇<br>Apps, tienda 3D y redes.</p>
 
-    <!-- Tripo AI · OCULTO hasta que llegue el enlace nuevo.
-         Para revivirlo: borra esta línea y la de cierre del comentario que
-         está debajo del bloque, y cambia el href por la URL nueva. Los
-         estilos .link.tripo y la imagen tripo.png siguen en su lugar.
-    <a class="link tripo" href="https://tripo.pxf.io/Jkdqrv" target="_blank" rel="noopener sponsored">
+    <!-- Tripo AI · enlace de colaboración, con código de invitación.
+         rel="sponsored" marca el enlace como patrocinado, que es lo que
+         corresponde a un enlace de afiliado y lo que Google espera ver. -->
+    <a class="link tripo" href="https://tripo.pxf.io/Jkdqrv?p.invite_code=FBAPGJ" target="_blank" rel="noopener sponsored">
       <img class="app-ico" src="tripo.png" alt="Tripo AI"
            onerror="this.outerHTML='&lt;span class=\'emoji\'&gt;✨&lt;/span&gt;'">
-      <span class="txt">Crea modelos 3D con Tripo AI<small>IA que genera modelos 3D en segundos · colaboración 🤝</small></span>
+      <span class="txt">Crea modelos 3D con Tripo AI<small><span class="accent">🎁 500 créditos + 60 % off</span></small></span>
       <span class="arrow">↗</span>
     </a>
-    -->
 
     <a class="link shop" href="https://vt.tiktok.com/ZSX1uq4hF/?page=TikTokShop" target="_blank" rel="noopener">
       <span class="emoji">🛍️</span>
