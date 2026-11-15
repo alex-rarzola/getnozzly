@@ -6,7 +6,7 @@
 <title>Nozzly — Costo, precio y gestión de impresión 3D</title>
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-<meta name="description" content="Calcula el precio real de tus impresiones 3D: material, luz, tiempo de máquina, IVA y margen. Cotizaciones en PDF, conjuntos de varias piezas y catálogo por categorías. Para iPhone, iPad y Android.">
+<meta name="description" content="Calcula el precio real de tus impresiones 3D: material, luz, tiempo de máquina, IVA y margen. Abre tus .3mf y .stl en el navegador y lee el panel de tu laminador con una foto. Cotizaciones en PDF, conjuntos de varias piezas y catálogo por categorías. Para iPhone, iPad y Android.">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -172,7 +172,7 @@
     <div class="nav-links">
       <a href="#try">Pruébalo</a>
       <a href="#features">Funciones</a>
-      <a href="#android">Android</a>
+      <a href="#capturas">Capturas</a>
       <a href="#premium">Premium</a>
       <a href="privacy.html">Privacidad</a>
       <a class="nav-dl" id="navDownload" href="#descargar">Descargar</a>
@@ -186,8 +186,8 @@
   <div class="wrap hero-grid">
     <div>
       <h1>Cobra el precio real de tus impresiones 3D</h1>
-      <p class="sub">Nozzly calcula cuánto cuesta de verdad cada pieza —filamento, luz, el tiempo de tu máquina y tu margen— y te deja mandar la cotización en PDF, con tu catálogo ordenado por categorías.</p>
-      <div class="hero-ctas" id="descargar">
+      <p class="sub">Abre el .3mf o el .stl que te mandaron y gíralo en tu teléfono. Nozzly calcula cuánto cuesta de verdad cada pieza —filamento, luz, el tiempo de tu máquina y tu margen— y te deja mandar la cotización en PDF.</p>
+      <div class="hero-ctas">
         <a class="appstore-btn" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener" aria-label="Descargar Nozzly en la App Store">
           <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span class="ab-txt"><small>Descargar en la</small><b>App Store</b></span>
@@ -209,6 +209,11 @@
   </div>
 </div>
 
+<!-- El visor incrustado se quitó de la landing a propósito: si se puede usar
+     completo desde el navegador, no hay motivo para instalar la app, que es
+     justo donde el visor vale. `visor.html` sigue en el sitio y funcionando,
+     sin enlazar desde aquí, por si se decide regresarlo. -->
+
 <section class="try" id="try">
   <div class="wrap">
     <h2 class="reveal">Pruébalo: ¿cuánto cuesta tu pieza?</h2>
@@ -217,11 +222,14 @@
       <div>
         <div class="ctrl">
           <label>Gramos de filamento <b><span id="vG">25</span> g</b></label>
-          <input type="range" id="g" min="1" max="500" value="25">
+          <input type="range" id="g" min="1" max="2000" value="25">
         </div>
         <div class="ctrl">
           <label>Horas de impresión <b><span id="vH">2.0</span> h</b></label>
           <input type="range" id="h" min="0" max="48" step="0.5" value="2">
+          <small style="display:block;margin-top:6px;opacity:.7;font-size:12.5px">
+            El archivo 3D no guarda el tiempo de impresión: ponlo tú, o léelo del
+            panel de tu laminador con una foto desde la app.</small>
         </div>
         <div class="ctrl">
           <label>Margen de ganancia <b><span id="vM">60</span> %</b></label>
@@ -256,6 +264,10 @@
     <h2 class="reveal">Deja de cotizar a ojo</h2>
     <p class="lead reveal">La mayoría pierde dinero porque solo cuenta el filamento. Nozzly cuenta todo.</p>
     <div class="grid">
+      <div class="card reveal"><div class="ic">⬡</div><h3>Abre y gira tus modelos 3D</h3><p>Te mandan un .3mf o un .stl por WhatsApp y lo abres en la app: lo giras con el dedo y ves medidas, cuántas piezas trae y los colores reales de cada filamento. En iPhone y en Android, sin costo.</p></div>
+      <div class="card reveal"><div class="ic">◉</div><h3>Lee tu laminador con una foto</h3><p>Toma una foto del panel de Bambu Studio, Orca o Creality Print y Nozzly captura los gramos y el tiempo. Si el corte usa varios filamentos, separa el gramaje de cada uno.</p></div>
+      <div class="card reveal"><div class="ic">!</div><h3>Te avisa si un costo se come tu precio</h3><p>Cuando un solo concepto domina el total, Nozzly te lo dice antes de que cotices.</p></div>
+      <div class="card reveal"><div class="ic">▸</div><h3>Listo en un minuto</h3><p>Un asistente inicial deja configurada tu máquina, tu luz y tu hora de trabajo la primera vez que abres la app.</p></div>
       <div class="card reveal"><div class="ic">$</div><h3>Costo real, no estimado</h3><p>Material por color y marca, electricidad, merma y el margen que tú decidas, con desglose claro.</p></div>
       <div class="card reveal"><div class="ic">⏱</div><h3>Cobra el tiempo de tu máquina</h3><p>Define un costo por hora de impresión y el tiempo deja de ser invisible en tu precio.</p></div>
       <div class="card reveal"><div class="ic">◎</div><h3>Varios filamentos por pieza</h3><p>Costea piezas a varios colores o materiales, cada filamento con su gramaje.</p></div>
@@ -269,17 +281,17 @@
   </div>
 </section>
 
-<section class="shots">
+<section class="shots" id="capturas">
   <div class="wrap">
     <h2 class="reveal">Así se ve</h2>
     <div class="carousel reveal">
       <div class="phone car-phone">
         <div class="ph-fallback" id="carFallback">Agrega tus capturas:<br>cap1.png · cap2.png · cap3.png</div>
-        <img class="slide active" src="cap1.png" alt="Cotiza conjuntos y piezas sueltas juntos" onerror="document.getElementById('carFallback').style.display='flex';">
-        <img class="slide" src="cap2.png" alt="Cotización en PDF con tu logo" onerror="document.getElementById('carFallback').style.display='flex';">
-        <img class="slide" src="cap3.png" alt="Desglose de IVA en la cotización" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide active" src="cap1.png" alt="Visor 3D: abre y gira tus .3mf y .stl" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap2.png" alt="Costeo y cotización con el precio total de venta" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap3.png" alt="Cotización en PDF con tu logo" onerror="document.getElementById('carFallback').style.display='flex';">
         <img class="slide" src="cap4.png" alt="Filamentos con stock y costo por gramo" onerror="document.getElementById('carFallback').style.display='flex';">
-        <img class="slide" src="cap5.png" alt="Catálogo filtrado por categoría" onerror="document.getElementById('carFallback').style.display='flex';">
+        <img class="slide" src="cap5.png" alt="Tu catálogo de figuras y conjuntos" onerror="document.getElementById('carFallback').style.display='flex';">
       </div>
       <div class="dots">
         <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -290,13 +302,17 @@
 
 <section class="android" id="android">
   <div class="wrap">
-    <span class="badge-soon reveal">YA DISPONIBLE</span>
-    <h2 class="reveal">Nozzly ya está en Android</h2>
-    <p class="lead reveal">La misma app, las mismas funciones, ahora también en Google Play. Descárgala gratis en tu teléfono o tablet Android.</p>
+    <!-- Antes esto era un anuncio de lanzamiento ("YA DISPONIBLE · Nozzly ya
+         está en Android"). Con Android publicado desde hace meses, mantenerlo
+         decía entre líneas "somos una app de iPhone que además tiene Android".
+         Y el "también el visor 3D" hacía pensar que el visor era exclusivo de
+         Android justo cuando es la novedad de las dos. -->
+    <h2 class="reveal">También en Android</h2>
+    <p class="lead reveal">La misma app, con las mismas funciones y el mismo precio. Lo que configuras en una lo encuentras igual en la otra.</p>
     <div class="ashots reveal">
-      <img src="play1.png" alt="Nozzly para Android — precio de venta" loading="lazy">
-      <img src="play2.png" alt="Nozzly para Android — tus figuras" loading="lazy">
-      <img src="play3.png" alt="Nozzly para Android — filamentos" loading="lazy">
+      <img src="play1.png" alt="Nozzly para Android — visor 3D" loading="lazy">
+      <img src="play2.png" alt="Nozzly para Android — precio de venta" loading="lazy">
+      <img src="play3.png" alt="Nozzly para Android — tu catálogo" loading="lazy">
     </div>
     <div class="reveal">
       <a class="playbadge" href="https://play.google.com/store/apps/details?id=com.alejandrorosales.nozzly" target="_blank" rel="noopener" aria-label="Disponible en Google Play">
@@ -313,18 +329,32 @@
       <span class="badge">NOZZLY PREMIUM</span>
       <h2>Lleva tu negocio de impresión 3D al siguiente nivel</h2>
       <p>Un solo pago, sin suscripción. Desbloquea las herramientas que te hacen cotizar y vender como pro.</p>
+      <!-- ►► PON AQUÍ EL PRECIO REAL ◄◄  Sustituye PRECIO_AQUI por lo que
+           cobras en la App Store (p. ej. "$199 MXN"). No lo puse yo porque el
+           único número que encontré en el repo es el 9.99 del archivo de
+           pruebas de StoreKit, que no es necesariamente lo que cobras.
+           Mientras esté el marcador, es mejor borrar esta línea completa que
+           publicarla así. La pregunta que contesta —"¿cuánto cuesta y es
+           suscripción?"— es la primera que se hace quien llega aquí. -->
+      <p class="precio" style="font-size:20px;font-weight:700;color:#0C5B45;margin-top:4px">
+        PRECIO_AQUI <span style="font-weight:400;font-size:15px;color:#5a6b66">· pago único, para siempre</span>
+      </p>
       <div class="pgrid">
         <div><b>Cotizaciones en PDF</b><span>Con el nombre y el logo de tu negocio, listas para enviar.</span></div>
         <div><b>Clientes guardados</b><span>Con RFC y contacto, para cotizar en un toque.</span></div>
         <div><b>Conjuntos de varias piezas</b><span>Arma un producto con sus partes y cotízalo como uno solo.</span></div>
         <div><b>Cotiza todo junto</b><span>Conjuntos y piezas sueltas en la misma cotización.</span></div>
+        <div><b>Lee tu laminador con la cámara</b><span>Una foto del panel y los gramos y el tiempo se capturan solos.</span></div>
         <div><b>Importa tu .3mf</b><span>Trae el archivo del slicer y crea las figuras automáticamente.</span></div>
         <div><b>Extras reutilizables</b><span>Bolsa, argolla o pintura, con cobro por cantidad prorrateado.</span></div>
         <div><b>Inventario de filamento</b><span>Descuenta tu stock al imprimir y te avisa cuando queda poco.</span></div>
         <div><b>Exportar a Excel</b><span>Lleva tu catálogo a Excel, Numbers o Google Sheets.</span></div>
         <div><b>Sin límites</b><span>Impresoras, filamentos y figuras ilimitados.</span></div>
       </div>
-      <div class="premium-ctas">
+      <!-- Aquí aterriza el botón "Descargar" del menú en escritorio: es el
+           único bloque con las dos insignias juntas. Antes apuntaba al hero,
+           que ya está en pantalla, y por eso el botón parecía no hacer nada. -->
+      <div class="premium-ctas" id="descargar" style="scroll-margin-top:96px">
         <a class="appstore-btn" href="https://apps.apple.com/app/nozzly/id6780641595" target="_blank" rel="noopener" aria-label="Descargar Nozzly en la App Store">
           <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span class="ab-txt"><small>Descargar en la</small><b>App Store</b></span>
@@ -344,6 +374,8 @@
     <div class="foot-links">
       <a href="https://instagram.com/nozzly_print" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@nozzly_print" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/nozzly.print" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/@nozzly_print" target="_blank" rel="noopener">YouTube</a>
       <a href="privacy.html">Política de Privacidad</a>
       <a href="terms.html">Términos y Condiciones</a>
       <a href="mailto:hello.nozzly@gmail.com">Contacto</a>
