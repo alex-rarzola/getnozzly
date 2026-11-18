@@ -59,6 +59,14 @@
   .link.tripo .accent { opacity: 1; font-weight: 600; }
   .link.tripo .arrow { color: #F0BC1E; opacity: .95; }
   .link.tripo .app-ico { background: transparent; padding: 0; }
+  /* Blanco sólido: es el único botón que no compite con otro de la lista.
+     El amarillo chocaba con el de Mercado Libre y el verde con el de
+     WhatsApp; sobre el degradado verde, el blanco es el que más resalta. */
+  .link.cat { background: #fff; color: #0C5B45; border-color: transparent; font-weight: 700;
+              box-shadow: 0 10px 26px rgba(0,0,0,.18); }
+  .link.cat:hover { background: #f2fbf7; transform: translateY(-3px); }
+  .link.cat .txt small { opacity: .72; }
+  .link.cat .arrow { opacity: .5; }
   .soon { background: rgba(255,255,255,.07); border-style: dashed; }
   .soon .badge { font-size: 11px; font-weight: 700; letter-spacing: .5px;
                  background: #F0BC1E; color: #0B3D30; padding: 3px 9px; border-radius: 20px; }
@@ -87,6 +95,15 @@
     <a class="link shop" href="https://vt.tiktok.com/ZSX1uq4hF/?page=TikTokShop" target="_blank" rel="noopener">
       <span class="emoji">🛍️</span>
       <span class="txt">Compra en mi TikTok Shop<small>Piezas listas para enviar 🔥</small></span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <!-- El catálogo va aquí arriba, con los enlaces de venta, y no abajo con
+         las redes: es el único que atiende al cliente de mayoreo, que es el
+         que deja más. Abre en la misma pestaña por ser del mismo sitio. -->
+    <a class="link cat" href="catalogo.html">
+      <span class="emoji">📒</span>
+      <span class="txt">Catálogo completo<small>Mira todas mis piezas y pide por mayoreo 📦</small></span>
       <span class="arrow">↗</span>
     </a>
 
